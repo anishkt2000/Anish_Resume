@@ -1,0 +1,383 @@
+ %-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{ Anish Kumar} % Your Name
+\newcommand{\course}{Civil Engineering} % Your Program
+\newcommand{\roll}{20113025} % Your Roll No.
+\newcommand{\phone}{8210592876} % Your Phone Number
+\newcommand{\emaila}{anish.sde1@gmail.com} %Email 1
+\newcommand{\github}{anishkt2000} %Github
+\newcommand{\linkedin}{anishkt20} %linkedin
+\newcommand{\leetcode}{Anish-Kumar} %linkedin
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+\begin{center}
+    \LARGE{\textbf{\name}}
+\end{center}
+\vspace{-3.5mm}
+\begin{center}
+    \small{\href{https://github.com/\github}{\faGithub \hspace{0.2mm} github.com} |  
+  \href{https://leetcode.com/\leetcode/}{\faCode \hspace{0.2mm} leetcode.com} | 
+    \href{https://www.linkedin.com/in/\linkedin/}{\faLinkedin \hspace{0.2mm} linkedin.com} | 
+    \href{mailto:\emaila}{\faEnvelope \hspace{0.2mm} \emaila} | 
+    \faPhone \hspace{0.2mm} +91-\phone }
+\end{center}
+
+% \vspace{-2mm}
+% {
+% \begin{tabularx}{\linewidth}{X r}
+%   \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+%    & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+%   Software Engineer | FullStack Developer & 
+%   \href{https://leetcode.com/anishkt20}{\raisebox{0.0\height}{\footnotesize \faLeetcode}\ {Leetcode Profile}} \\
+%   & \href{https://github.com/anishkt2000}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+%   & \href{https://www.linkedin.com/in/anishkt20/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+% \end{tabularx}
+
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{{\LARGE Mukul Yadav ~~~\href{https://github.com/mukul7661}{\faGithub} ~~\href{https://www.linkedin.com/in/mukul7661/}{{\includegraphics[width=0.5cm]{linkedin.png}}} ~{ \href{https://codeforces.com/profile/morty_19}{\includegraphics[height=0.6cm]{code-forces.png}}}} ~~\href{https://leetcode.com/mukul7661/}{{ \includegraphics[width=0.5cm]{leetcode (2).png}}}  } & Email: \href{mailto:mukul7661@gmail.com}{mukul7661@gmail.com}\\
+  
+
+%   {} & Mobile:~+91-9729381278  \\
+
+
+  
+% \end{tabular*}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+         {Indian Institute Of Technology, Roorkee (Uttrakhand) }{ 7.327}
+        {B.Tech in Civil Engineering}{2020-24}
+    
+         % {NIT, Jalandhar}{2019-23}
+        % {Bachelor of Technology in Instrumentation and Control Engineering}{GPA: 8.32}
+        \resumeSubheading
+        {Param Gyan Niketan, Gaya (Bihar) }{ 92.80 \%}
+        {Intermediate, PCM}{2018-20}
+%          % {NIT, Jalandhar}{2019-23}
+%         % {Bachelor of Technology in Instrumentation and Control Engineering}{GPA: 8.32}
+%         \resumeSubheading
+% {Gyan Bharti Public School, Gaya (Bihar)}{92.80\%}
+% {Matriculate (Class X)}
+
+
+         % {NIT, Jalandhar}{2019-23}
+        % {Bachelor of Technology in Instrumentation and Control Engineering}{GPA: 8.32}
+     
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+ \resumeSubheading
+      {Tricon Infotech}{Onsite}
+      {Associate Software Engineer} {Aug 2024 - Present}
+      % \vspace{-2.0mm}
+      \resumeItemListStart
+      % \item \textbf{TechStack : }{ReactJs, Go, Adobe XD}
+   
+    \item { Created a \textbf{document question-answering model} enabling efficient management of departmental PDFs within organizations.}
+    
+    \item { Implemented a chunking strategy with 2000-character segments and generated embeddings for both documents and user queries.}
+    \item {Utilized Euclidean distance to identify the top 5 relevant document chunks based on question embeddings, enhancing accuracy in information retrieval.}
+    \item { Integrated with the Gemini model to generate optimal answers, ensuring users receive precise responses relevant to their specific departmental documents.}
+    % \item {Maintained and updated codebase through platforms like GitHub, Source Cloud, Google Cloud, and Firebase.}
+    \resumeItemListEnd
+    \vspace{0.1 mm}
+
+    
+    \resumeSubheading
+      {Swift Software Solution}{Remote}
+      {Associate Software Engineer} {May - July 2023}
+      % \vspace{-2.0mm}
+      \resumeItemListStart
+      % \item \textbf{TechStack : }{ReactJs, Go, Adobe XD}
+    \item {I enhanced the \textbf{"DataHub-Ui"} project by building a robust authentication system, subscription panel, and connecting the frontend with  API endpoints.}
+    \item {Focused on crucial tasks such as optimizing authentication through caching and website debugging.}
+    \item {Implemented an OpenAI Chatbot using ReactJS to augment the website's functionality.}
+    % \item {Maintained and updated codebase through platforms like GitHub, Source Cloud, Google Cloud, and Firebase.}
+    \resumeItemListEnd
+    \vspace{0.1 mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+% \resumeSubHeadingListStart
+
+%    \resumeProject
+%       {Research Project} %Project Name
+%       {Perception of Commuters towards Air Quality in Delhi} %Project Name, Location Name
+%       {Dec 2022-April 2023 } %Event Dates
+%       {IIT Roorkee}
+      
+  \resumeProject
+      {Full-Stack Chat Application (Tech: MERN Stack)} %Project Name
+      {A full-stack chat application for seamless communication and enhanced user engagement.} %Project Name, Location Name
+      {Dec 2023 - Feb 2024 } %Event Dates
+      % {Personal Project}
+      
+
+      \resumeItemListStart
+         \item {Create a chat app that's easy to use and has a frontend design that makes it simple for users to share data.}
+         \item {Implemented multiple REST API routes and seamlessly integrated them with the backend functionality.}
+        \item {Integrated Socket.io for seamless two-way communication, ensuring real-time interaction between users.}
+        \item {Designed and managed databases using MongoDB for efficient data storage.}
+        % \item { \href{https://github.com/asqre/Ecommerce_FullStack_MERN}{\textbf{Ecommerce Github repository}} and Deployed the application on \href{https://kind-puce-ostrich-suit.cyclic.app/}{\textbf{Cyclic}}.  }
+    \resumeItemListEnd
+    \vspace{-1mm}
+
+    \resumeProject
+      {Full-Stack E-Commerce Web Application Development (Tech: MERN Stack)} %Project Name
+      {A full-stack e-commerce platform for clients to boost online sales and improve customer engagement.} %Project Name, Location Name
+      {Aug 2023 - Nov 2023} %Event Dates
+      % {Personal Project}
+
+      \resumeItemListStart
+        \item {A full-stack e-commerce platform for clients to boost online sales and improve customer engagement.}
+        \item {Utilized Node.js and Express.js to create robust and scalable server-side and ReactJs for client side application.}
+         \item {Designed and managed MongoDB databases, optimizing data storage with CRUD operations for enhanced functionality.}
+        % \item { \href{https://github.com/asqre/Ecommerce_FullStack_MERN}{\textbf{Ecommerce Github repository}} and Deployed the application on \href{https://kind-puce-ostrich-suit.cyclic.app/}{\textbf{Cyclic}}.  }
+    \resumeItemListEnd
+    \vspace{-1mm}
+     \resumeSubheading
+      {Research Project}{IIT Roorkee}
+      {Perception of Commuters towards Air Quality in Delhi} {Dec 2022 - April 2023}
+      \resumeItemListStart
+        \item {Researched the influence of air quality information on commuter behavior in Delhi, employing diverse machine learning models (SVM, Naive Bayes, Random Forest and MLR).}
+        \item {Analyzed model outcomes, emphasizing feature importance using various techniques, including ROC curves , confusion matrices, loss functions, and classification reports.}
+           \item {Policy proposal to reduce poor air quality exposure, informed by model analysis.}
+         % \item { \href{https://github.com/asqre/Book-Room-Stay}{\textbf{Project Github repository}} }
+    \resumeItemListEnd
+    \vspace{-1mm}
+    
+    % \resumeProject
+    %   {Diabetes Data Prediction and Analysis (Tech: Data Analysis)} %Project Name
+    %   { Research on Data Mining Methodologies }
+    %   % {A full-stack e-commerce platform for clients to boost online sales and improve customer engagement.} %Project Name, Location Name
+    %   {March 2023 - April 2023} %Event Dates
+    %   {IIT Roorkee}
+
+    %   \resumeItemListStart
+    %     \item {Predictive Diabetes Model: Built a Logistic Regression model to forecast diabetes occurrences.}
+    %     \item {Risk Factor Analysis: Explored links between diabetes, smoking, hypertension, and heart diseases.}
+    %        \item {Data-Driven Insights: Enhanced healthcare decisions by providing actionable risk assessments.}
+    %     % \item { \href{https://github.com/asqre/Ecommerce_FullStack_MERN}{\textbf{Ecommerce Github repository}} and Deployed the application on \href{https://kind-puce-ostrich-suit.cyclic.app/}{\textbf{Cyclic}}.  }
+    % \resumeItemListEnd
+    \vspace{-1mm}
+     
+    
+    % \resumeProject
+    %   {Twitter data extractor (Selenium | Python)} %Project Name
+    %   {Develop a Python script using Selenium to extract data from five Twitter profiles.} %Project Name, Location Name
+    %   {May 2023 - July 2023} %Event Dates
+
+    %   \resumeItemListStart
+    %     \item {Utilized Python and Selenium to automate the data extraction process from Twitter profiles.}
+    %     \item {Successfully extracted a variety of information, including followers and the following list, from each targeted Twitter profile.}
+    %      \item { \href{https://github.com/asqre/twitter_data_extractor}{\textbf{Twitter Crawler Github repository}} }
+    % \resumeItemListEnd
+    % \vspace{-2mm}
+
+%     \resumeProject
+%       {Smart Waste Management System (Mobile Application \& IoT Devices | Flutter)} %Project Name
+%       {Created an innovative SWMS by integrating a mobile app with IoT devices for efficient waste management.} %Project Name, Location Name
+%       {Sep 2022 - Apr 2023} %Event Dates
+
+%       \resumeItemListStart
+%         \item {It uses IoT sensors to collect real-time data from dustbins and send it to the
+% application for monitoring the fill-level status.}
+%         \item {This Mobile Application displays the real-time status of the dustbins and provides optimized routes for garbage collection.
+%     }
+%       \item { \href{https://github.com/asqre/Smart_west_management_system_SWMS-apk}{\textbf{Smart Waste Management System Github repository}} }
+%     \resumeItemListEnd
+      
+   \resumeSubHeadingListEnd
+\vspace{-2.5mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, Javascript, Python (Basic) , Java(Oops)} \\
+     % \textbf{Libraries }{: C++ STL, Python Libraries, ReactJs, Selenium }\\ 
+     % \textbf{Web Dev Tools}{: Nodejs, VScode, Git, Github, Sublime, Adobe XD } \\ 
+     \textbf{Frameworks}{: ReactJs, Angular, Express, NodeJs } \\
+     \textbf{Cloud/Databases}{: MongoDb, SQL} \\  
+     \textbf{Relevent Coursework}{: Data Structures \& Algorithms, Operating Systems, Object Oriented Programming, Database Management System, Software Engineering, Git. } \\ 
+     \textbf{Areas of Interest}{: Data Structure And Algorithm, FullStack Development, Machine Learning} \\
+     % \textbf{Soft Skills}{: Problem Solving, Self-learning, Presentation, Adaptability} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+% %-----------Positions of Responsibility-----------------
+% \section{\textbf{LEADERSHIP}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{TTA (Team Technical Affairs)} % Position
+%     {} %Club,Event
+%     {Jun 2022 - Jun 2023} %Tenure Period \\
+%     \resumeItemListStart
+%     \item {Marketing Coordinator of Technical Fest (Techniti), NITJ}
+%     \item {Core Member of Think India NIT Jalandhar}
+%     \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+% %-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{} % Award
+{Secured AIR \textbf{9458} (Percentile-99.159\%) in \textbf{JEE MAINS} out of 1.2 million students in 2020.}
+
+\resumePOR{} 
+{Secured AIR-11945 in \textbf{JEE-Advanced 2020}.}
+
+\resumePOR{} 
+{Cleared \textbf{Mathematics Olympiad} and \textbf{NTSE} at school level.}
+
+\resumePOR{} 
+{Solved more than \textbf{1000} data structure problems on various coding platforms.}
+
+\resumePOR{} 
+{Achieved \textbf{Specialist} on \textbf{Codeforces} with a maximum rating of 1542.}
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+
+%-------------------------------------------
+\end{document}
